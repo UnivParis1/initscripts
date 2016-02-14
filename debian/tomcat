@@ -25,6 +25,9 @@ PIDFILE=$TOMCAT_HOME/temp/$NAME.pid
 export CATALINA_PID=$PIDFILE
 #export JAVA_OPTS=-XX:MaxPermSize=256m
 
+. /lib/lsb/init-functions
+export PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
 wait_tomcat_started() {
     timeout=$WAIT_TOMCAT_STARTED_TIMEOUT
     sleep 4
